@@ -19,6 +19,10 @@ export default function index() {
       link: "name-counter",
       text: "Name Counter",
     },
+    {
+      link: "use-effect",
+      text: "Use Effect",
+    },
   ];
 
   return (
@@ -28,7 +32,7 @@ export default function index() {
       <div className="max-w-screen-md mx-auto my-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12">
           {pagesLinks.map((link) => (
-            <Link to={link.link} className="bg-white text-center rounded-sm">
+            <Link to={link.link} className="bg-white text-center rounded-sm" key={link.link}>
               {link.text}
             </Link>
           ))}

@@ -3,6 +3,7 @@ import index from "./pages";
 import UserCardPage from "./pages/UserCardPage";
 import ArrayLettersPage from "./pages/ArrayLettersPage";
 import NameCounterPage from "./pages/NameCounterPage";
+import UseEffectPage from "./pages/UseEffectPage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="/user-card" Component={UserCardPage} />
         <Route path="/array-letters" Component={ArrayLettersPage} />
         <Route path="/name-counter" Component={NameCounterPage} />
+        <Route path="/use-effect" Component={UseEffectPage} />
       </Routes>
     </div>
   );
