@@ -4,6 +4,7 @@ import UserCardPage from "./pages/UserCardPage";
 import ArrayLettersPage from "./pages/ArrayLettersPage";
 import NameCounterPage from "./pages/NameCounterPage";
 import UseEffectPage from "./pages/UseEffectPage";
+import UserListPage from "./pages/UserListPage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/array-letters" Component={ArrayLettersPage} />
         <Route path="/name-counter" Component={NameCounterPage} />
         <Route path="/use-effect" Component={UseEffectPage} />
+        <Route path="/user-list" Component={UserListPage} />
       </Routes>
     </div>
   );
