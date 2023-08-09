@@ -27,6 +27,10 @@ export default function index() {
       link: "user-list",
       text: "User List",
     },
+    {
+      link: "simple-todo",
+      text: "Simple Todolist",
+    },
   ];
 
   return (
