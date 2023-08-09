@@ -26,6 +26,16 @@ export default function SimpleTodo() {
       },
     ]);
   }
+
+  function handleComplete(id: string){
+    const updatedTodos = todos.map((todo) =>   { 
+      todo.id === id ? {todo, completed : !todo.completed} : todo})
+      
+      setTodos(updatedTodos);
+      
+    }
+
+
   return (
     <div className="container mx-auto text-white">
       <div className="flex flex-col items-center">
