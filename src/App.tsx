@@ -6,6 +6,7 @@ import NameCounterPage from "./pages/NameCounterPage";
 import UseEffectPage from "./pages/UseEffectPage";
 import UserListPage from "./pages/UserListPage";
 import SimpleTodoPage from "./pages/SimpleTodoPage";
+import UseFetchPage from "./pages/UseFetchPage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/use-effect" Component={UseEffectPage} />
         <Route path="/user-list" Component={UserListPage} />
         <Route path="/simple-todo" Component={SimpleTodoPage} />
+        <Route path="/use-fetch" Component={UseFetchPage} />
       </Routes>
     </div>
   );

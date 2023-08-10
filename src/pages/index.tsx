@@ -31,6 +31,10 @@ export default function index() {
       link: "simple-todo",
       text: "Simple Todolist",
     },
+    {
+      link: "use-fetch",
+      text: "Use Fetch",
+    },
   ];
 
   return (
