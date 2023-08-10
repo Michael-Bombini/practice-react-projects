@@ -27,14 +27,20 @@ export default function SimpleTodo() {
     ]);
   }
 
-  function handleComplete(id: string){
-    const updatedTodos = todos.map((todo) =>   { 
-      todo.id === id ? {todo, completed : !todo.completed} : todo})
-      
-      setTodos(updatedTodos);
-      
-    }
+  function handleComplete(id: string) {
+    const updatedTodos = todos.map((todo) => {
+      return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
+    });
+    setTodos(updatedTodos);
+  }
 
+  function handleDelete(id: string) {
+    const updatedTodos = todos.filter((todo) => {
+      return todo.id !== id ? todo : '';
+    });
+
+    setTodos(updatedTodos);
+  }
 
   return (
     <div className="container mx-auto text-white">
@@ -44,6 +50,9 @@ export default function SimpleTodo() {
             id={todo.id}
             name={todo.name}
             completed={todo.completed}
+            onComplete={handleComplete}
+            onDelete={handleDelete}
+            key={todo.id}
           />
         ))}
       </div>
