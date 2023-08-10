@@ -35,6 +35,10 @@ export default function index() {
       link: "use-fetch",
       text: "Use Fetch",
     },
+    {
+      link: "use-array",
+      text: "Use Array",
+    },
   ];
 
   return (

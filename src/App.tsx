@@ -7,6 +7,7 @@ import UseEffectPage from "./pages/UseEffectPage";
 import UserListPage from "./pages/UserListPage";
 import SimpleTodoPage from "./pages/SimpleTodoPage";
 import UseFetchPage from "./pages/UseFetchPage";
+import UseArrayPage from "./pages/UseArrayPage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/user-list" Component={UserListPage} />
         <Route path="/simple-todo" Component={SimpleTodoPage} />
         <Route path="/use-fetch" Component={UseFetchPage} />
+        <Route path="/use-array" Component={UseArrayPage} />
       </Routes>
     </div>
   );
