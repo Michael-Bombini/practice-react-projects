@@ -8,6 +8,7 @@ import UserListPage from "./pages/UserListPage";
 import SimpleTodoPage from "./pages/SimpleTodoPage";
 import UseFetchPage from "./pages/UseFetchPage";
 import UseArrayPage from "./pages/UseArrayPage";
+import UseLocalStoragePage from "./pages/UseLocalStoragePage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/simple-todo" Component={SimpleTodoPage} />
         <Route path="/use-fetch" Component={UseFetchPage} />
         <Route path="/use-array" Component={UseArrayPage} />
+        <Route path="/use-localstorage" Component={UseLocalStoragePage} />
       </Routes>
     </div>
   );

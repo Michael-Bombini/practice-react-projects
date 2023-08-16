@@ -39,6 +39,10 @@ export default function index() {
       link: "use-array",
       text: "Use Array",
     },
+    {
+      link: "use-localstorage",
+      text: "Use LocalStorage",
+    },
   ];
 
   return (
