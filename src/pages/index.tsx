@@ -43,6 +43,10 @@ export default function index() {
       link: "use-localstorage",
       text: "Use LocalStorage",
     },
+    {
+      link: "form-validation",
+      text: "Form Validation",
+    },
   ];
 
   return (
@@ -52,7 +56,11 @@ export default function index() {
       <div className="max-w-screen-md mx-auto my-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12">
           {pagesLinks.map((link) => (
-            <Link to={link.link} className="bg-white text-center rounded-sm" key={link.link}>
+            <Link
+              to={link.link}
+              className="bg-white text-center rounded-sm"
+              key={link.link}
+            >
               {link.text}
             </Link>
           ))}
