@@ -47,6 +47,10 @@ export default function index() {
       link: "form-validation",
       text: "Form Validation",
     },
+    {
+      link: "advanced-todo",
+      text: "Advanced Todolist",
+    },
   ];
 
   return (

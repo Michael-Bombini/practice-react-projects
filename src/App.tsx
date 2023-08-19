@@ -10,6 +10,7 @@ import UseFetchPage from "./pages/UseFetchPage";
 import UseArrayPage from "./pages/UseArrayPage";
 import UseLocalStoragePage from "./pages/UseLocalStoragePage";
 import FormValidationPage from "./pages/FormValidationPage";
+import AdvancedTodoPage from "./pages/AdvancedTodoPage";
 
 export default function App() {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/use-array" Component={UseArrayPage} />
         <Route path="/use-localstorage" Component={UseLocalStoragePage} />
         <Route path="/form-validation" Component={FormValidationPage} />
+        <Route path="/advanced-todo" Component={AdvancedTodoPage} />
       </Routes>
     </div>
   );
