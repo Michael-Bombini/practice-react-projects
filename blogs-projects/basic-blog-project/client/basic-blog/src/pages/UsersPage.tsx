@@ -1,4 +1,5 @@
 import { useQuery } from "react-query";
+import PostCard from "../components/post/PostCard";
 import UserCard from "../components/user/UserCard";
 
 export interface User {

@@ -60,20 +60,20 @@ export default function SingleUser() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-6xl text-black font-bold py-6">{user.username}</h1>
-      <h2 className="text-3xl text-black mb-2">{user.email}</h2>
+      <h1 className="text-6xl text-black font-bold py-6">{user?.username}</h1>
+      <h2 className="text-3xl text-black mb-2">{user?.email}</h2>
       <div>
         <div className="flex gap-6 text-2xl">
           <span className="font-bold">Company:</span>
-          <div>{user.company.name}</div>
+          <div>{user?.company?.name}</div>
         </div>
         <div className="flex gap-6 text-2xl">
           <span className="font-bold">Website:</span>
-          <div>{user.website}</div>
+          <div>{user?.website}</div>
         </div>
         <div className="flex gap-6 text-2xl">
           <span className="font-bold">Address:</span>
-          <div>{user.address.street}</div>
+          <div>{user?.address?.street}</div>
         </div>
       </div>
     </div>

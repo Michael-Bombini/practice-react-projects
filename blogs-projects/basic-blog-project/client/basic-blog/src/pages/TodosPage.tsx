@@ -37,7 +37,7 @@ export default function TodosPage() {
       <h1 className="text-6xl text-black font-bold py-6">Todos</h1>
       <ul className="flex flex-col gap-6 px-8">
         {todos.map((todo) => (
-          <TodoItem title={todo.title} completed={todo.completed} />
+          <TodoItem title={todo.title} completed={todo.completed} key={todo.id} />
         ))}
       </ul>
     </div>
