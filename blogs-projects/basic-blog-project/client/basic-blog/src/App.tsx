@@ -6,7 +6,8 @@ import UsersPage from "./pages/UsersPage";
 import TodosPage from "./pages/TodosPage";
 import SinglePost from "./pages/SinglePost";
 import SingleUser from "./pages/SingleUser";
-import _404 from "./pages/_404"
+import _404 from "./pages/_404";
+import FormPost from "./pages/FormPost";
 export default function App() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/users" Component={UsersPage} />
           <Route path="/user/:id" Component={SingleUser} />
           <Route path="/todos" Component={TodosPage} />
+          <Route path="/new-post" Component={FormPost} />
           <Route path="*" Component={_404} />
         </Routes>
       </main>
