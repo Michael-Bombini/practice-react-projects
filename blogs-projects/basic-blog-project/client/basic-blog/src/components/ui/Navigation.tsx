@@ -17,7 +17,7 @@ export default function Navigation() {
           <Link to={"todos"}>Todos</Link>
         </li>
         <li>
-          <Link to={"new-post"}>New Post</Link>
+          <Link to={"new-edit-post"}>New Post</Link>
         </li>
       </ul>
     </nav>

@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/users" Component={UsersPage} />
           <Route path="/user/:id" Component={SingleUser} />
           <Route path="/todos" Component={TodosPage} />
-          <Route path="/new-post" Component={FormPost} />
+          <Route path="/new-edit-post" Component={FormPost} />
           <Route path="*" Component={_404} />
         </Routes>
       </main>

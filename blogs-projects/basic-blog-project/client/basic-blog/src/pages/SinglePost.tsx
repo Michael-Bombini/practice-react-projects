@@ -76,6 +76,7 @@ export default function SinglePost() {
     data: post,
   } = useQuery<Post>(`post${id}`, fetchPost, {
     staleTime: 60000, //1 minuto
+    refetchOnMount: "always",
   });
 
   const {
@@ -90,9 +91,7 @@ export default function SinglePost() {
     isLoading: userLoading,
     error: userError,
     data: user,
-  } = useQuery<User>(`user${id}`, fetchUser, {
-    staleTime: 60000, //1 minuto
-  });
+  } = useQuery<User>(`user${id}`, fetchUser);
 
   if (postLoading || commentLoading || userLoading) {
     return <PostLoading />;
@@ -104,13 +103,36 @@ export default function SinglePost() {
 
   return (
     <div className="container mx-auto">
+      <Link
+        to={"/new-edit-post"}
+        state={{
+          isEditing: true,
+          currentTitle: post.title,
+          currentBody: post.body,
+          currentAuthor: user.name,
+          postId: id,
+        }}
+      >
+        Edit Post
+      </Link>
       <h1 className="text-6xl text-black font-bold py-6">{post.title}</h1>
       <p className="text-xl">{post.body}</p>
       <div className="flex flex-col gap-6 my-6">
-      <div className="text-2xl">By: <Link to={`/user/${post.userId}`} className="underline text-blue-700">{user.name}</Link></div>
+        <div className="text-2xl">
+          By:{" "}
+          <Link to={`/user/${post.userId}`} className="underline text-blue-700">
+            {user.name}
+          </Link>
+        </div>
         <h2 className="text-3xl text-black font-bold py-6">Comments</h2>
         {comments.map((comment) => {
-          return <Comment key={comment.id} comment={comment.body} email={comment.email} />;
+          return (
+            <Comment
+              key={comment.id}
+              comment={comment.body}
+              email={comment.email}
+            />
+          );
         })}
       </div>
     </div>
