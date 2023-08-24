@@ -112,6 +112,7 @@ export default function SinglePost() {
           currentAuthor: user.name,
           postId: id,
         }}
+        className="bg-green-700 px-3 py-1 text-white my-4 inline-block"
       >
         Edit Post
       </Link>
